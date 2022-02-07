@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+$shadow: 0 1px 1px rgba(0, 0, 0, 0.05), 0 2px 2px rgba(0, 0, 0, 0.05),
+  0 4px 4px rgba(0, 0, 0, 0.05), 0 8px 8px rgba(0, 0, 0, 0.05),
+  0 16px 16px rgba(0, 0, 0, 0.05);
+$background-color1: hsl(52, 50%, 96%);
+$background-color2: white;
+$text-color: hsl(213, 69%, 10%);
+$border: 5vh solid hsl(213, 69%, 10%);
+
+@mixin content {
+  max-width: 1200px;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $background-color1;
+  color: $text-color;
+  font-family: "poppins", sans-serif;
+}
+
+.header {
+  background-color: $background-color2;
+  padding: 1em 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: $shadow;
+
+  &__content {
+    display: flex;
+    align-items: baseline;
+    margin: 0 auto;
+    max-width: $max-width;
+  }
+
+  &__title {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+}
+
+.nav-list {
+  display: flex;
+
+  &__link {
+    font-weight: 600;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.quote {
+  height: 100vh;
+  background-image: url("/img/achtergrondQuote.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: $border;
+
+  &__content {
+    padding-left: 40%;
+    @include content;
+  }
+
+  &__title {
+    text-align: right;
+    font-size: 4.5em;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  &__name {
+    text-align: right;
+    letter-spacing: 5px;
+    font-weight: 200;
+    font-size: 1.5em;
+    margin: 2em 0 4em;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      to top right,
+      transparent 50%,
+      hsla(52, 90%, 50%, 0.4) 50%,
+      hsla(22, 90%, 50%, 0.4) 70%
+    ),
+    url("/img/achtergrondAbout.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  margin: 4em auto;
+  @include content;
+  scroll-margin-top: 9rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+  }
+
+  &__title {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+}
+
+.profile-card {
+  background-color: $background-color2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  padding: 0 2em 2em;
+  border-radius: 20px;
+
+  &__photo {
+    border-radius: 45%;
+    width: 200px;
+    margin-top: 50px;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 2em;
+  }
+
+  &__function-title {
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border-top: 2px dotted hsl(52, 90%, 10%);
+    border-bottom: 2px dotted hsl(52, 90%, 10%);
+    padding: 0.5em 0;
+    margin: 1em 0;
+  }
+
+  &__description {
+    line-height: 1.4;
+  }
+}
+
+.favorites {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color2;
+  border-radius: 15px;
+  margin: 4em auto;
+  @include content;
+  padding: 3em;
+  scroll-margin-top: 9rem;
+
+  &__title {
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.favorite-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 500px;
+  max-width: 300px;
+  flex-basis: 300px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border-radius: 20px;
+  background-size: cover;
+  margin: 1em;
+
+  &__name {
+    background-color: hsla(52, 50%, 96%, 0.8);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 1em;
+    width: 300px;
+  }
+}
+
+.favorite-item--cat {
+  background-image: url("/img/kat.jpg");
+}
+
+.favorite-item--gaming {
+  background-image: url("/img/gaming.jpg");
+}
+
+.favorite-item--skiing {
+  background-image: url("/img/ski.jpg");
+}
+
+.favorite-item--series {
+  background-image: url("/img/series.jpg");
+}
+
+.favorite-item--reading {
+  background-image: url("/img/lezen.jpg");
+}
+
+.favorite-item--climbing {
+  background-image: url("/img/indoorklimmen.jpg");
+}
+
+.footer {
+  background-color: hsl(213, 69%, 10%);
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+}

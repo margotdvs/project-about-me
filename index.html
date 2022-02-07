@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML & CSS opdracht</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="header__title">mijn oefening</h1>
+        <nav class="header__nav">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#quote">Quote</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#about">Over mij</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#favorites">Favorieten</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="quote" class="quote">
+      <h2 class="sr-only">Quote</h2>
+      <figure class="quote__content">
+        <blockquote class="quote__title">Stoute kat!</blockquote>
+        <figcaption class="quote__name">&mdash; Margot De Vos</figcaption>
+      </figure>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about__content">
+        <h2 class="about__title">Over mij</h2>
+        <section class="profile-card">
+          <img
+            class="profile-card__photo"
+            src="/img/foto.jpg"
+            alt="meisje die wandelt op een boomstam in een bos"
+          />
+          <h3 class="profile-card__title">Margot De Vos</h3>
+          <span class="profile-card__function-title">Front End Developer</span>
+          <span class="profile-card__description">code websites</span>
+        </section>
+      </div>
+    </section>
+
+    <section id="favorites" class="favorites">
+      <h2 class="favorites__title">Mijn favorieten</h2>
+      <div class="favorites__list">
+        <article class="favorite-item favorite-item--cat">
+          <h3 class="favorite-item__name">Kat</h3>
+        </article>
+
+        <article class="favorite-item favorite-item--gaming">
+          <h3 class="favorite-item__name">Gamen</h3>
+        </article>
+
+        <article class="favorite-item favorite-item--skiing">
+          <h3 class="favorite-item__name">Skiën</h3>
+        </article>
+
+        <article class="favorite-item favorite-item--series">
+          <h3 class="favorite-item__name">Series</h3>
+        </article>
+
+        <article class="favorite-item favorite-item--reading">
+          <h3 class="favorite-item__name">Lezen</h3>
+        </article>
+
+        <article class="favorite-item favorite-item--climbing">
+          <h3 class="favorite-item__name">Indoor klimmen</h3>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Opdracht HTML & CSS | front-end developer - voltijds dagonderwijs |
+        Margot De Vos
+      </p>
+    </footer>
+  </body>
+</html>
