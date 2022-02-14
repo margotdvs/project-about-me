@@ -81,7 +81,7 @@ body {
 
 .quote {
   height: 100vh;
-  background-image: url("img/achtergrondQuote.jpg");
+  background-image: url("/img/achtergrondQuote.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -121,7 +121,7 @@ body {
       hsla(52, 90%, 50%, 0.4) 50%,
       hsla(22, 90%, 50%, 0.4) 70%
     ),
-    url("img/achtergrondAbout.jpg");
+    url("/img/achtergrondAbout.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -230,7 +230,7 @@ body {
 }
 
 .favorite-item--cat {
-  background-image: url("img/kat.jpg");
+  background-image: url("/img/kat.jpg");
 }
 
 .favorite-item--gaming {
@@ -238,7 +238,7 @@ body {
 }
 
 .favorite-item--skiing {
-  background-image: url("img/ski.jpg");
+  background-image: url("/img/ski.jpg");
 }
 
 .favorite-item--series {
@@ -246,11 +246,11 @@ body {
 }
 
 .favorite-item--reading {
-  background-image: url("img/lezen.jpg");
+  background-image: url("/img/lezen.jpg");
 }
 
 .favorite-item--climbing {
-  background-image: url("img/indoorklimmen.jpg");
+  background-image: url("/img/indoorklimmen.jpg");
 }
 
 .footer {
